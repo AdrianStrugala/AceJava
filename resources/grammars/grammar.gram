@@ -1,0 +1,18 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar 
+ */
+
+grammar grammar;
+
+public <aceName> = (ace | es);
+public <runProgram> = (run | open | start) <program>;
+public <exit> = (goodbye | see you) [ <aceName> ];
+public <operation> = <number> <suboperation>+;
+public <number> = ( zero | one | two | three | four | five | six | seven | nine | ten | eleven | twelve | thirteen | fourteen | fifteen | sixteen | seventeen | eighteen | nineteen | twenty | thirty | forty | fifty | sixty | seventy | eighty | ninety | hundred | thousand | million )+;                   
+public <suboperation> = <operator> <number>;
+public <operator> = (plus | minus | multiply | divide | modulo);
+public <greet> = ( hello | hey | hi ) [ <aceName> ];
+
+public <program> = (notepad|calculator|calc);
